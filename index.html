@@ -1,11 +1,177 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Sit on chair</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
     <link href="css/reset.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <h1>
+                    Sit <span class="special-text"> on </span> chair
+                </h1>
+            </div>
 
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">O firmie</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="jumbotron">
+        <div class="container">
+            <div class="arrow arrow-left"> <span> < </span></div>
+            <div class="jumbotron__armchair">
+                <div class="jumbotron__armchair-image">
+                    <!-- image of armchair set as background in CSS-->
+                </div>
+            </div>
+            <div class="jumbotron__description">
+                <h2>
+                    Sit<span class="special-text"> on</span> our <span class="special-text">chair</span>
+                </h2>
+                <p>Old crow bladnoch one-balled dictator; midori four horsemen; cheeky vimto cointreau knockdhu hayride. Balmenach, sake screwdriver leroux lime rickey kensington court. </p>
+                <button class="button button--medium"><a href="#">Zobacz więcej</a></button>
+            </div>
+            <div class="arrow arrow-right"><span> > </span></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="offer">
+            <div class="container">
+                <div class="offer__featured offer__featured--1">
+                    <div class="featured__title">
+                        <h3 class="heading heading--medium">Chair CLAIR</h3>
+                    </div>
+                </div>
+                <div class="offer__featured offer__featured--2">
+                    <div class="featured__title">
+                        <h3 class = "heading heading--medium">Chair MARGARITA</h3>
+                    </div>
+                </div>
+                <div class="offer__box">
+                    <h3>Finds all inputs</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Amet massa vitae tortor condimentum lacinia quis vel eros donec.
+                        Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="prices">
+        <div class="container">
+            <div class="heading__container">
+                <h2 class = "heading heading--big">Cennik</h2>
+            </div>
+            <div class="price__card">
+                <div class="price__card--circle--top">
+                    <div class="price__card--circle-inner"></div>
+                </div>
+                <div class="price__card--main">
+                    <h2>Basic Plan</h2>
+                    <div class="price__card--main--circle">
+                        <h3>85 <sup>99</sup></h3>
+                        <p>pln/msc</p>
+                    </div>
+                    <div class="price__card--menu">
+                        <ul>
+                            <li>Zakup towaru + dowóz</li>
+                            <li>Serwis</li>
+                        </ul>
+                        <button class="button button--small"><a href="#">Dołącz</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="price__card price__card--featured">
+                <div class="price__card--circle--top">
+                    <div class="price__card--circle-inner"></div>
+                </div>
+                <div class="price__card--main">
+                    <h2>Basic Plan</h2>
+                    <div class="price__card--main--circle">
+                        <h3>85 <sup>99</sup></h3>
+                        <p>pln/msc</p>
+                    </div>
+                    <div class="price__card--menu">
+                        <ul>
+                            <li>Zakup towaru + dowóz</li>
+                            <li>Serwis</li>
+                            <li>Gwarancja 5 lat</li>
+                        </ul>
+                        <button class="button button--small"><a href="#">Dołącz</a></button>
+                     </div>
+                </div>
+            </div>
+            <div class="price__card">
+                <div class="price__card--circle--top">
+                    <div class="price__card--circle-inner"></div>
+                </div>
+                <div class="price__card--main">
+                    <h2>Advance Plan</h2>
+                    <div class="price__card--main--circle">
+                        <h3>211<sup>00</sup></h3>
+                        <p>pln/msc</p>
+                    </div>
+                    <div class="price__card--menu">
+                        <ul>
+                            <li>Zakup towaru + dowóz</li>
+                            <li>Serwis</li>
+                            <li>Gwarancja 5 lat</li>
+                            <li>Porady Projektanta</li>
+                        </ul>
+                        <button class="button button--small"><a href="#">Dołącz</a></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class = "section-main-form">
+        <div class="container">
+            <h2 class="heading heading--big">Kontakt</h2>
+            <form action="#" class="main-form">
+                <div class="main-form-column--left">
+                    <input type="text" placeholder="Imię" id="n</div>ame" name="name">
+                    <input type="email" placeholder="email" id="email" name="email">
+                    <textarea placeholder="Wiadomość" name="message" rows="5" required ></textarea>
+                </div>
+                <div class="main-form-column--right">
+                    <div class="red-chair-wrapper"></div>
+                    <div class="custom-checkbox-wrapper">
+                        <div class="custom-checkbox-box"></div>
+                        <input type="checkbox" class="checkbox" id="checkbox-accept" name="checkbox-accept">
+                        <label  for="checkbox-accept"></label>
+                        <p class="checkbox-custom-label">Zgadzam się na przetwarzanie danych osobowych</p>
+                    </div>
+                    <input type="submit" id="submit-button" class="button button--small" value ="Wyślij">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-text">
+                <p>Copyright 2018 | All rights reserved - Sit On Chair</p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#"><img src="images/flickr.png"></a></li>
+                    <li><a href="#"><img src="images/vimeo.png"></a></li>
+                    <li><a href="#"><img src="images/pinterest.png"></a></li>
+                    <li><a href="#"><img src="images/twitter.png"></a></li>
+                </ul>
+                <p>Sit <span> on </span> chair</p>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
