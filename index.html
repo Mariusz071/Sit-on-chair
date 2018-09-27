@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale >
     <title>Sit on chair</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="css/reset.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -18,7 +20,13 @@
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">O firmie</a></li>
+                    <li><a href="#">O firmie</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Aktualnosci</a></li>
+                            <li><a href="#">Nasz team</a></li>
+                            <li><a href="#">Historia</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Galeria</a></li>
                     <li><a href="#">Kontakt</a></li>
                 </ul>
@@ -44,25 +52,22 @@
             <div class="arrow arrow-right"><span> > </span></div>
         </div>
     </section>
-
-    <section>
-        <div class="offer">
-            <div class="container">
-                <div class="offer__featured offer__featured--1">
-                    <div class="featured__title">
-                        <h3 class="heading heading--medium">Chair CLAIR</h3>
-                    </div>
+    <section class="offer">
+        <div class="container">
+            <div class="offer__featured offer__featured--1">
+                <div class="featured__title">
+                    <h3 class="heading heading--medium">Chair CLAIR</h3>
                 </div>
-                <div class="offer__featured offer__featured--2">
-                    <div class="featured__title">
-                        <h3 class = "heading heading--medium">Chair MARGARITA</h3>
-                    </div>
+            </div>
+            <div class="offer__featured offer__featured--2">
+                <div class="featured__title">
+                    <h3 class = "heading heading--medium">Chair MARGARITA</h3>
                 </div>
-                <div class="offer__box">
-                    <h3>Finds all inputs</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Amet massa vitae tortor condimentum lacinia quis vel eros donec.
-                        Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac.</p>
-                </div>
+            </div>
+            <div class="offer__box">
+                <h3>Finds all inputs</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Amet massa vitae tortor condimentum lacinia quis vel eros donec.
+                    Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac.</p>
             </div>
         </div>
     </section>
@@ -140,18 +145,22 @@
             <h2 class="heading heading--big">Kontakt</h2>
             <form action="#" class="main-form">
                 <div class="main-form-column--left">
+                    <label for="name"></label>  
                     <input type="text" placeholder="Imię" id="n</div>ame" name="name">
+                    <label for="email"></label>
                     <input type="email" placeholder="email" id="email" name="email">
+                    <label for="message"></label>
                     <textarea placeholder="Wiadomość" name="message" rows="5" required ></textarea>
                 </div>
                 <div class="main-form-column--right">
                     <div class="red-chair-wrapper"></div>
-                    <div class="custom-checkbox-wrapper">
-                        <div class="custom-checkbox-box"></div>
-                        <input type="checkbox" class="checkbox" id="checkbox-accept" name="checkbox-accept">
-                        <label  for="checkbox-accept"></label>
+                        <label for="checkbox-accept" class="custom-checkbox--wrapper">
+                            <input type="checkbox" class="checkbox" id="checkbox-accept" name="checkbox-accept">
+                            <span class="custom-checkbox">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </label>
                         <p class="checkbox-custom-label">Zgadzam się na przetwarzanie danych osobowych</p>
-                    </div>
                     <input type="submit" id="submit-button" class="button button--small" value ="Wyślij">
                 </div>
             </form>
@@ -173,5 +182,6 @@
             </nav>
         </div>
     </footer>
+<script src="JS/main.js"></script>
 </body>
 </html>
