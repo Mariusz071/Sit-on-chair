@@ -36,11 +36,12 @@
 
     <section class="jumbotron">
         <div class="container">
-            <div class="arrow arrow-left"> <span> < </span></div>
+            <button class="arrow arrow-left"> < </button>
             <div class="jumbotron__armchair">
-                <div class="jumbotron__armchair-image">
-                    <!-- image of armchair set as background in CSS-->
-                </div>
+                <ul class="slider">
+                    <li><img src="images/black_chair.png" class="jumbotron__armchair-image"/></li>
+                    <li><img src="images/orange_chair.png" class="jumbotron__armchair-image"/></li>
+                </ul>
             </div>
             <div class="jumbotron__description">
                 <h2>
@@ -49,7 +50,7 @@
                 <p>Old crow bladnoch one-balled dictator; midori four horsemen; cheeky vimto cointreau knockdhu hayride. Balmenach, sake screwdriver leroux lime rickey kensington court. </p>
                 <button class="button button--medium"><a href="#">Zobacz więcej</a></button>
             </div>
-            <div class="arrow arrow-right"><span> > </span></div>
+            <button class="arrow arrow-right"> > </button>
         </div>
     </section>
     <section class="offer">
@@ -140,30 +141,112 @@
 
         </div>
     </section>
+
+    <section class="application ">
+        <div class="container">
+            <section class="choice_part inline">
+                <header>
+                    <h3 class="heading--medium">SKOMPONUJ SWOJE KRZESŁO</h3>
+                    <span class="green_bell"></span>
+                </header>
+
+                <div class="form">
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz rodzaj</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li>Clair</li>
+                            <li>Margarita</li>
+                            <li>Selena</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz kolor</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li>Czerwony</li>
+                            <li>Czarny</li>
+                            <li>Pomarańczowy</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz materiał</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li>Tkanina</li>
+                            <li>Skóra</li>
+                        </ul>
+                    </div>
+                    <div class="checkbox check-box">
+                        <input type="checkbox" id="transport" data-transport-price="200">
+                        <label for="transport">Transport</label>
+                    </div>
+                    <!--<div class="checkbox"></div>-->
+                    <!--<span class="list_label inline_text">Transport</span>-->
+                </div>
+            </section>
+
+            <section class="image_part inline">
+                <img src="images/red_chair.png">
+            </section>
+
+            <section class="summary_part inline">
+                <header class="align_right">
+                    <h3 class="heading--medium">PODSUMOWANIE</h3>
+                    <span class="green_bell"></span>
+                </header>
+
+                <div class="summary_panel">
+                    <div class="panel_left">
+                        <h4 class="title">Twój fotel</h4>
+                        <span class="color"></span>
+                        <span class="pattern"></span>
+                        <span class="transport"></span>
+                    </div>
+                    <div class="panel_right">
+                        <h4 class="title value"></h4>
+                        <span class="color value"></span>
+                        <span class="pattern value"></span>
+                        <span class="transport value"></span>
+                    </div>
+                    <div class="sum_label">SUMA</div>
+                    <div class="sum"><strong></strong></div>
+                </div>
+                <a href="" class="green_button">Zamawiam</a>
+            </section>
+        </div>
+    </section>
+
     <section class = "section-main-form">
         <div class="container">
             <h2 class="heading heading--big">Kontakt</h2>
             <form action="#" class="main-form">
                 <div class="main-form-column--left">
-                    <label for="name"></label>  
-                    <input type="text" placeholder="Imię" id="n</div>ame" name="name">
-                    <label for="email"></label>
+                    <label for="name">Imię</label>
+                    <input type="text" placeholder="Imię" id="name" name="name">
+                    <label for="email">email</label>
                     <input type="email" placeholder="email" id="email" name="email">
-                    <label for="message"></label>
-                    <textarea placeholder="Wiadomość" name="message" rows="5" required ></textarea>
+                    <label for="message">wiadomość</label>
+                    <textarea placeholder="Wiadomość" id="message" rows="5" required ></textarea>
                 </div>
                 <div class="main-form-column--right">
-                    <div class="red-chair-wrapper"></div>
-                        <label for="checkbox-accept" class="custom-checkbox--wrapper">
-                            <input type="checkbox" class="checkbox" id="checkbox-accept" name="checkbox-accept">
-                            <span class="custom-checkbox">
-                                <i class="fas fa-check"></i>
-                            </span>
-                        </label>
-                        <p class="checkbox-custom-label">Zgadzam się na przetwarzanie danych osobowych</p>
-                    <input type="submit" id="submit-button" class="button button--small" value ="Wyślij">
+                    <div class="red-chair-wrapper">
+                        <!--image od red chair-->
+                    </div>
+                    <label for="checkbox-accept" class="custom-checkbox--wrapper">
+                        <input type="checkbox" class="checkbox" id="checkbox-accept" name="checkbox-accept">
+                        <span class="custom-checkbox">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </label>
+                    <p class="checkbox-custom-label">
+                        Zgadzam się na przetwarzanie danych osobowych
+                    </p>
+                    <button type="submit" id="submit-button" class="button button--small">
+                        Wyślij
+                    </button>
                 </div>
-            </form>
+          </form>
         </div>
     </section>
     <footer class="footer">
