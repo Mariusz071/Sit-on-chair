@@ -45,6 +45,14 @@ html {
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
 }
 
+.button--small {
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    margin: 15px auto;
+}
+
 .button--medium {
     height: 100px;
     border: none;
@@ -140,8 +148,10 @@ html {
     letter-spacing: 3px;
 }
 
+
 /*dropdown menu*/
 .dropdown-menu {
+    opacity: 0;
     display: none;
     position: absolute;
     text-align: center;
@@ -150,10 +160,10 @@ html {
     width: 160px;
     padding-top: 1.5rem;
     background-color: #000;
-    transition: all .3s;
     clip-path: polygon(0 10%, 30% 10%, 50% 0,70% 10%, 100% 10%, 100% 100%, 0 100%);
     -webkit-clip-path:polygon(0 10%, 30% 10%, 50% 0,70% 10%, 100% 10%, 100% 100%, 0 100%);
 }
+
 
 .dropdown-menu > li {
     font-size: 1rem;
@@ -434,14 +444,6 @@ h3 sup {
     background-color: #F1F1F1;
 }
 
-.button--small {
-    width: 200px;
-    height: 50px;
-    border-radius: 7px;
-    font-size: 1.5rem;
-
-}
-
 /*featured card*/
 .price__card--featured  .price__card--circle--top,
 .price__card--featured .price__card--main,
@@ -482,11 +484,6 @@ h3 sup {
     align-items: center;
 }
 
-/*.application h3 {*/
-    /*color: #575757;*/
-    /*font-size: 1.5rem;*/
-/*}*/
-
 .application header.align_right{
     text-align: right;
 }
@@ -519,40 +516,6 @@ h3 sup {
     font-weight: 200;
 }
 
-
-
-.checkbox label {
-    display: block;
-    padding-left: 65px;
-    position: relative;
-    font-size: 28px;
-    color: #cecece;
-    line-height: 120%;
-    padding-top: 10px;
-    cursor: pointer;
-}
-
-.checkbox label::before, .checkbox label::after {
-    border: 1px solid #27c7ab;
-    content: "";
-    display: block;
-    left: 0;
-    height: 48px;
-    position: absolute;
-    width: 48px;
-    top: 0;
-}
-.checkbox label::after {
-    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
-    border: 0;
-    display: none;
-}
-
-.checkbox input:checked + label::after {
-    display: block;
-}
-
-
 .active {
     background: url('../images/form_ok.jpg');
     width: 48px;
@@ -573,13 +536,6 @@ h3 sup {
 }
 
 
-.application .green_bell {
-    background-color: #24baa0;
-    width: 200px;
-    height: 6px;
-    display: inline-block;
-    margin: 5px 0 5px 0;
-}
 
 .summary_panel {
     background-color: white;
@@ -590,21 +546,6 @@ h3 sup {
 
 }
 
-.application .green_button {
-    background-color: #27c7ab;
-    color: white;
-    text-align:center;
-    text-transform: uppercase;
-    width: 200px;
-    padding: 10px 30px;
-    font-size: 24px;
-    display: inline-block;
-    font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
-    margin-top: 20px;
-    margin-left: 29px;
-    border-radius: 8px;
-    text-decoration: none;
-}
 .panel_left {
     display: inline-block;
     width: 185px;
@@ -813,13 +754,19 @@ h3 sup {
     color: #27C7AB;
 }
 
-.main-form-column--right p {
+.checkbox-custom-label {
     width: 350px;
     display: inline-block;
     color: #C2C2C2;
     font-size: 1.5rem;
     margin: 0 0 20px 70px;
 }
+
+.transport-label {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
 
 .main-form-column--right .button {
     width: 100%;
