@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     li.forEach(function (el) {
         el.addEventListener('mouseover', function () {
             const dropdownMenu = el.querySelector('li > .dropdown-menu');
-            dropdownMenu.style.transition = "all 1s ease 3s"
+            dropdownMenu.style.transition = "all 1s ease 3s";
             if (dropdownMenu !== null) {
                 dropdownMenu.style.display = "block";
-                dropdownMenu.style.opacity = "1";
+                dropdownMenu.style.animation =".2s fadeIn forwards";
             }
         });
 
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const dropdownMenu = el.querySelector('li >.dropdown-menu');
             if (dropdownMenu !== null) {
                 dropdownMenu.style.display = "none";
-                dropdownMenu.style.opacity = "0";
             }
         });
     });
@@ -28,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let imgIndex = 0;
 
     sliderElements[imgIndex].classList.add('visible');
-    const visibleElement = document.querySelector('li.visible');
-    visibleElement.style.opacity = "1";
+    const visibleElement = document.querySelector('.visible');
 
     nextButton.addEventListener('click', function () {
         sliderElements[imgIndex].classList.remove('visible');
@@ -40,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
             imgIndex++;
         }
         sliderElements[imgIndex].classList.add('visible');
+
+        sliderElements.forEach ( function (el) {
+            el.style.animation = "1s imgFadeIn";
+        })
     });
 
     prevButton.addEventListener('click', function () {
@@ -51,6 +53,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         sliderElements[imgIndex].classList.add('visible');
     });
+
+
+    /*SLIDER-CAROUSEL*/
+        visibleElement.style.animation = ".5s fadeIn";
+        setInterval(function() {
+            sliderElements[imgIndex].classList.remove('visible');
+            if (imgIndex == 1) {
+                imgIndex = 0;
+            } else {
+                imgIndex++;
+            }
+            sliderElements[imgIndex].classList.add('visible')
+            sliderElements.forEach ( function (el) {
+                el.style.animation = ".5s fadeIn";
+            });
+        }, 6000);
+
 
     /* FORM FUNCTIONS*/
     const formDropdown = document.querySelectorAll('.drop_down_list');

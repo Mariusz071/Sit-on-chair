@@ -79,7 +79,7 @@
 
 .panel_right {
   display: inline-block;
-  width: 100px;
+  width: 60%;
   border-left:1px solid #e7e7e7;
   text-align: right;
   vertical-align: top;
@@ -159,6 +159,11 @@
 
 .title {
   height: 30px;
+}
+@media (max-width: 1500px) {
+  .panel_right {
+    width: 40%;
+  }
 }
 
 @media (max-width: 1200px) {

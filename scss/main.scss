@@ -18,6 +18,7 @@ font-family: Arial, sans-serif;
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/functions";
+@import "abstracts/animations";
 
 //BASE
 @import "base/animations";
@@ -38,4 +39,4 @@ font-family: Arial, sans-serif;
 @import "layout/prices-section";
 @import "layout/application-section";
 @import "layout/main-form";
-@import "layout/footer"
+@import "layout/footer";
