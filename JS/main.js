@@ -74,6 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalSum = document.querySelector('.sum strong');
     console.log(totalSum);
 
+    let totalPrice = [];
+
 
 
 
@@ -91,11 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 calcTitle.innerText = choosenItem.innerText;
                 chairPrice.innerHTML = el.dataset.price;
+                totalSum.innerText = parseInt(chairPrice.textContent);
             });
         })
     });
 
-    var secondItems = secondDropdown.querySelectorAll('li');
+    const secondItems = secondDropdown.querySelectorAll('li');
     secondItems.forEach(function (el) {
         dropButtons[1].addEventListener('click', function () {
             dropdownList[1].style.display = "block";
@@ -111,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 colorPrice.innerHTML = "Gratis";
             })
         });
+    });
 
         var thirdItems = thirdDropdown.querySelectorAll('li');
         thirdItems.forEach(function (el) {
@@ -126,17 +130,34 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     chairMaterial.innerText = choosenItem.innerText;
                     materialPrice.innerText = el.dataset.priceMaterial;
+                    totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent);
                 })
-            });
+            });parseInt(materialPrice.textContent);
         });
         transportCheckbox.addEventListener('change', function () {
             if (transportCheckbox.checked) {
                 transportPrice.innerText = transportCheckbox.dataset.transportPrice;
+                totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent) + parseInt(transportPrice.innerText);
             } else {
                 transportPrice.innerText = 0;
+                totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent) - parseInt(transportPrice.innerText);
             }
         });
-    })
 });
 
 
+// var checkBoxes = document.querySelectorAll('input');
+// checkBoxes = [...checkBoxes];
+// checkBoxes = checkBoxes.slice(1,checkBoxes.length-1);
+//
+// var totalPrice = 0;
+// checkBoxes.forEach ( function (el) {
+//
+//     var price = el.dataset.price;
+//     var checkedBox = el.checked;
+//
+//     if (checkedBox) {
+//         totalPrice += parseFloat(price);
+//     }
+// })
+// priceText.innerText = Math.round(totalPrice * 10) / 10;
