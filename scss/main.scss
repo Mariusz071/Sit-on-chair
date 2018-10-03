@@ -1,0 +1,41 @@
+/*
+black: #101010;
+green: #27C7AB;
+lighter grey: #F1F1F1;
+light grey: #F9F9F9;
+medium grey: E4E4E4;
+grey: #C2C2C2;
+
+FONTS:
+font-family: Tahoma, sans-serif;
+font-family: Raleway, sans-serif;
+font-family: Arial, sans-serif;
+ */
+
+/*GENERAL STYLING*/
+
+//ABSTRACTS
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+//BASE
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//COMPONENTS
+@import "components/buttons";
+@import "components/cards";
+@import "components/custom-checkbox";
+
+//LAYOUT
+@import "layout/header";
+@import "layout/main-nav";
+@import "layout/jumbotron-section";
+@import "layout/offer-section";
+@import "layout/prices-section";
+@import "layout/application-section";
+@import "layout/main-form";
+@import "layout/footer"

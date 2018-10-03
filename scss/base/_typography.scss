@@ -1,0 +1,52 @@
+
+.heading {
+  border-bottom: 13px  solid  $color-green;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    margin: auto;
+  }
+}
+
+.heading--medium  {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .heading--medium {
+    font-size: 2rem;
+  }
+}
+
+
+.heading--big {
+  font-size: 3rem;
+  width: 40%
+}
+
+@media (max-width: 500px) {
+  .heading--big {
+    width: 80%;
+  }
+}
+
+@media(max-width: 1000px) {
+  .heading {
+    border-width: 8px;
+  }
+}
+
+@media(max-width: 640px) {
+  .heading--big,
+  .heading--medium{
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+}
+
+.special-text {
+  color: $color-green;
+  text-transform: uppercase;
+}

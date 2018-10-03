@@ -1,4 +1,5 @@
 images
 .idea
 How to
-
+node_modules
+package-lock.json

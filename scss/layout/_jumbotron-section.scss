@@ -1,0 +1,169 @@
+.jumbotron {
+  background: $gray-gradient;
+}
+
+button.arrow {
+  display: inline-block;
+  font-size: 10rem;
+  color: $color-green;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all .3s;
+  z-index: 5;
+}
+
+
+.arrow-left:hover {
+  transform: translateX(-10px);
+}
+
+.arrow-right:hover {
+  transform: translateX(10px);
+}
+
+.jumbotron > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.jumbotron__description {
+  width: 45%;
+  margin: 0 0 0 -10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.jumbotron__description h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-weight: $font-bold;
+  text-align: center;
+}
+
+.jumbotron__description p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.jumbotron__armchair {
+  width: 55%;
+  margin-left: -8%;
+}
+
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider > li {
+  display: none;
+}
+
+li.visible {
+  display: inline-block;
+  width: 98%;
+
+}
+
+.slider li.visible > img {
+  width: 100%;
+  height: auto;
+}
+
+/*JUMBOTRON MEDIA QUERIES*/
+@media (max-width: 1580px) {
+  .jumbotron__description  {
+    width: 40%;
+  }
+}
+
+@media(max-width: 1380px) {
+  .jumbotron__description h2 {
+    font-size: 2.5rem;
+  }
+
+  button.arrow {
+    font-size: 7rem;
+  }
+}
+
+@media(max-width: 1180px) {
+
+  .jumbotron > .container {
+    padding: 2.5rem auto;
+  }
+  .jumbotron__description {
+    justify-content: center;
+  }
+
+  .jumbotron__description h2 {
+    font-size: 2rem;
+  }
+
+  .jumbotron__description p {
+    font-size: 1.5rem;
+    margin: 2rem auto;
+  }
+}
+
+@media(max-width: 980px) {
+  .jumbotron > .container {
+    flex-direction: column;
+  }
+
+  .jumbotron__armchair {
+    width: 80%;
+    margin: auto;
+  }
+
+  .jumbotron__description {
+    width: 80%;
+    margin: auto;
+  }
+
+  .jumbotron__description h2 {
+    font-size: 3rem;
+  }
+
+  .jumbotron__description p {
+    font-size: 1.75rem;
+  }
+
+  button.arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .jumbotron > .container {
+    padding: 1.5rem 0;
+  }
+
+  .jumbotron__armchair,
+  .jumbotron__description{
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .jumbotron__description  {
+    font-size: 2.5rem;
+  }
+
+  .jumbotron__description p {
+    width: 97%;
+    font-size: 1.25rem;
+  }
+}

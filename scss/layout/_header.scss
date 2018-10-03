@@ -1,0 +1,15 @@
+.header {
+  background-color: $color-black;
+  color: $color-white;
+  height: 84px;
+  text-transform: uppercase;
+
+  &__logo {
+    float: left;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 84px;
+    display: flex;
+    align-items: center;
+  }
+}

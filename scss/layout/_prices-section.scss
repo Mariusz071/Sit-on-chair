@@ -1,0 +1,26 @@
+/*PRICES SECTION*/
+.prices {
+  background-color: $color-lighter-grey;
+  padding: 5rem 0;
+  height: auto;
+}
+
+.heading__container {
+  min-width: 100%;
+}
+
+.prices > .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 900px) {
+  .prices {
+    padding: 2.5rem 0;
+  }
+
+  .prices h2 {
+    margin-bottom: 3rem;
+  }
+}

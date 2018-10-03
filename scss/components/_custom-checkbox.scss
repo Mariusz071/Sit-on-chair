@@ -1,0 +1,53 @@
+.checkbox {
+  visibility: hidden;
+  display: none;
+}
+
+.custom-checkbox--wrapper {
+  display: block;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  padding-bottom: 20px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid  $color-green;
+}
+.custom-checkbox i {
+  display: none;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox--wrapper input:checked ~ .custom-checkbox i {
+  display: block;
+}
+.custom-checkbox--wrapper .custom-checkbox i {
+  text-align: center;
+  font-size: 60px;
+  color: $color-green;
+}
+
+.checkbox-custom-label {
+  width: 350px;
+  display: inline-block;
+  color: $color-dark-grey;
+  font-size: 1.5rem;
+  margin: 0 0 20px 70px;
+}

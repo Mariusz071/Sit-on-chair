@@ -1,0 +1,24 @@
+$gap: 5px;
+$breakPoint: 860px;
+$columns: 12;
+
+.container {
+  padding: $gap;
+  .row {
+    padding: -$gap;
+    [class*="col-"] {
+      padding: $gap;
+      box-sizing: border-box;
+    }
+
+    @media(min-width: $breakPoint) {
+      display: flex;
+
+      @for $i from 1 through $columns {
+        .col-#{$i}-#{$columns} {
+          width: (100 / $columns * $i) * 1%;
+        }
+      }
+    }
+  }
+}
