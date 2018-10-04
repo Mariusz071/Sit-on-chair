@@ -31,9 +31,11 @@ font-family: Arial, sans-serif;
 @import "components/cards";
 @import "components/custom-checkbox";
 
+
 //LAYOUT
 @import "layout/header";
 @import "layout/main-nav";
+@import "layout/mobile-nav";
 @import "layout/jumbotron-section";
 @import "layout/offer-section";
 @import "layout/prices-section";

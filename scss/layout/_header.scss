@@ -13,3 +13,11 @@
     align-items: center;
   }
 }
+
+@media(max-width: 900px) {
+    .header__logo {
+      width: 220px;
+      float: none;
+      margin: 0 auto;
+    }
+}

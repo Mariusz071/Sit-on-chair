@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdownMenu.style.transition = "all 1s ease 3s";
             if (dropdownMenu !== null) {
                 dropdownMenu.style.display = "block";
-                dropdownMenu.style.animation =".2s fadeIn forwards";
+                dropdownMenu.style.animation = ".2s fadeIn forwards";
             }
         });
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         sliderElements[imgIndex].classList.add('visible');
 
-        sliderElements.forEach ( function (el) {
+        sliderElements.forEach(function (el) {
             el.style.animation = "1s imgFadeIn";
         })
     });
@@ -56,19 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /*SLIDER-CAROUSEL*/
-        visibleElement.style.animation = ".5s fadeIn";
-        setInterval(function() {
-            sliderElements[imgIndex].classList.remove('visible');
-            if (imgIndex == 1) {
-                imgIndex = 0;
-            } else {
-                imgIndex++;
-            }
-            sliderElements[imgIndex].classList.add('visible')
-            sliderElements.forEach ( function (el) {
-                el.style.animation = ".5s fadeIn";
-            });
-        }, 6000);
+    visibleElement.style.animation = ".5s fadeIn";
+    setInterval(function () {
+        sliderElements[imgIndex].classList.remove('visible');
+        if (imgIndex == 1) {
+            imgIndex = 0;
+        } else {
+            imgIndex++;
+        }
+        sliderElements[imgIndex].classList.add('visible')
+        sliderElements.forEach(function (el) {
+            el.style.animation = ".5s fadeIn";
+        });
+    }, 6000);
 
 
     /* FORM FUNCTIONS*/
@@ -93,15 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalSum = document.querySelector('.sum strong');
     console.log(totalSum);
 
-    let totalPrice = [];
-
-
-
-
     var firstItems = firstDropdown.querySelectorAll('li');
     firstItems.forEach(function (el) {
         dropButtons[0].addEventListener('click', function () {
-            dropdownList[0].style.display ="block";
+            dropdownList[0].style.display = "block";
 
             el.addEventListener('click', function () {
                 const choosenItem = dropdownList[0].parentElement.firstElementChild;
@@ -135,48 +130,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-        var thirdItems = thirdDropdown.querySelectorAll('li');
-        thirdItems.forEach(function (el) {
-            dropButtons[2].addEventListener('click', function () {
-                dropdownList[2].style.display = "block";
-
-                el.addEventListener('click', function () {
-                    const choosenItem = dropdownList[2].parentElement.firstElementChild;
-                    choosenItem.innerText = el.innerHTML;
-                    choosenItem.style.color = "#C2C2C2";
-                    if (choosenItem.innerText = el.innerHTML) {
-                        dropdownList[2].style.display = "none";
-                    }
-                    chairMaterial.innerText = choosenItem.innerText;
-                    materialPrice.innerText = el.dataset.priceMaterial;
-                    totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent);
-                })
-            });parseInt(materialPrice.textContent);
+    var thirdItems = thirdDropdown.querySelectorAll('li');
+    thirdItems.forEach(function (el) {
+        dropButtons[2].addEventListener('click', function () {
+            dropdownList[2].style.display = "block";
+            el.addEventListener('click', function () {
+                const choosenItem = dropdownList[2].parentElement.firstElementChild;
+                choosenItem.innerText = el.innerHTML;
+                choosenItem.style.color = "#C2C2C2";
+                if (choosenItem.innerText = el.innerHTML) {
+                    dropdownList[2].style.display = "none";
+                }
+                chairMaterial.innerText = choosenItem.innerText;
+                materialPrice.innerText = el.dataset.priceMaterial;
+                totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent);
+            })
         });
-        transportCheckbox.addEventListener('change', function () {
-            if (transportCheckbox.checked) {
-                transportPrice.innerText = transportCheckbox.dataset.transportPrice;
-                totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent) + parseInt(transportPrice.innerText);
-            } else {
-                transportPrice.innerText = 0;
-                totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent) - parseInt(transportPrice.innerText);
-            }
-        });
+        parseInt(materialPrice.textContent);
+    });
+    transportCheckbox.addEventListener('change', function () {
+        if (transportCheckbox.checked) {
+            transportPrice.innerText = transportCheckbox.dataset.transportPrice;
+            totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent) + parseInt(transportPrice.innerText);
+        } else {
+            transportPrice.innerText = 0;
+            totalSum.innerText = parseInt(chairPrice.textContent) + parseInt(materialPrice.textContent) - parseInt(transportPrice.innerText);
+        }
+    });
 });
-
-
-// var checkBoxes = document.querySelectorAll('input');
-// checkBoxes = [...checkBoxes];
-// checkBoxes = checkBoxes.slice(1,checkBoxes.length-1);
-//
-// var totalPrice = 0;
-// checkBoxes.forEach ( function (el) {
-//
-//     var price = el.dataset.price;
-//     var checkedBox = el.checked;
-//
-//     if (checkedBox) {
-//         totalPrice += parseFloat(price);
-//     }
-// })
-// priceText.innerText = Math.round(totalPrice * 10) / 10;

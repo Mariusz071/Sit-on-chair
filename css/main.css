@@ -92,7 +92,7 @@ html {
 
 @media (max-width: 700px) {
   .container {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -519,6 +519,14 @@ h3 sup {
           align-items: center;
 }
 
+@media (max-width: 900px) {
+  .header__logo {
+    width: 220px;
+    float: none;
+    margin: 0 auto;
+  }
+}
+
 .navbar {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -586,12 +594,6 @@ h3 sup {
   }
 }
 
-@media (max-width: 640px) {
-  .header__logo {
-    margin-left: 2rem;
-  }
-}
-
 /*dropdown menu*/
 .dropdown-menu {
   opacity: 0;
@@ -611,6 +613,85 @@ h3 sup {
   font-size: 1rem;
   display: block;
   padding: 1rem 0;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+.mobile-navbar a {
+  text-decoration: none;
+}
+
+.mobile-navbar a #btn1 {
+  top: 10px;
+}
+
+.mobile-navbar a #btn2 {
+  top: 80px;
+}
+
+.mobile-navbar a #btn3 {
+  top: 150px;
+}
+
+.mobile-item {
+  background-color: #27C7AB;
+  color: #FFF;
+  border: none;
+  border-radius: 30px;
+  width: 530px;
+  height: 60px;
+  position: fixed;
+  left: -485px;
+  z-index: 10;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.mobile-item p {
+  display: block;
+  line-height: 3.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.mobile-item:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  position: fixed;
+  left: -50px;
+  width: 100%;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.mobile-item:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-color: #101010;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0s;
+  transition: 0s;
+  color: #27C7AB;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 900px) {
+  .mobile-navbar {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-item {
+    left: -500px;
+  }
 }
 
 .jumbotron {
@@ -726,6 +807,9 @@ li.visible {
 @media (max-width: 1380px) {
   .jumbotron__description h2 {
     font-size: 2.5rem;
+  }
+  .jumbotron__armchair {
+    margin-left: -5%;
   }
   button.arrow {
     font-size: 7rem;

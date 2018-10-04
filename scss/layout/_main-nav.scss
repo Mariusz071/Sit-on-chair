@@ -51,11 +51,34 @@
   }
 }
 
-@media (max-width: 640px) {
-  .header__logo {
-    margin-left: 2rem;
-  }
-}
+//@keyframes borderRound {
+//  25% {
+//    border-left: 2px solid $color-white;
+//  }
+//
+//  50% {
+//    border-top: 2px solid $color-white;
+//    border-left: 2px solid $color-white;
+//  }
+//
+//  75% {
+//    border-right: 2px solid $color-white;
+//    border-top: 2px solid $color-white;
+//    border-left: 2px solid $color-white;
+//  }
+//
+//  100% {
+//    color: $color-black;
+//    border: 2px solid $color-white;
+//    letter-spacing: 3px;
+//  }
+//}
+//
+//@media (max-width: 640px) {
+//  .header__logo {
+//    margin-left: 2rem;
+//  }
+//}
 
 /*dropdown menu*/
 .dropdown-menu {
